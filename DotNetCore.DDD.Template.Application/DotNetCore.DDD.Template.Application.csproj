@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetCore.DDD.Template.Domain\DotNetCore.DDD.Template.Domain.csproj" />
+    <ProjectReference Include="..\DotNetCore.DDD.Template.Infrastructure\DotNetCore.DDD.Template.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
