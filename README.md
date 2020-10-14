@@ -1,2 +1,2 @@
 # DotNetCore.DDD.Template
-DDD 模式层级结构模板
+DDD模式层级结构模板
