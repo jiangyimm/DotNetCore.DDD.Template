@@ -1,2 +1,2 @@
 # DotNetCore.DDD.Template
-DDD结构模板
+DDD项目模板
