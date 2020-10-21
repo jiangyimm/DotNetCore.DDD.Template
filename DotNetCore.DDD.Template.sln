@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.DDD.Template.Api", "DotNetCore.DDD.Template.Api\DotNetCore.DDD.Template.Api.csproj", "{AA112554-58C3-4158-AD99-83E9F908AB00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.DDD.Template.Api", "src\DotNetCore.DDD.Template.Api\DotNetCore.DDD.Template.Api.csproj", "{AA112554-58C3-4158-AD99-83E9F908AB00}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{60759464-F16F-4870-88A3-FBD0E767FA7D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F593906A-F4F6-4718-B639-3FB6C3E67DBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.DDD.Template.Application", "DotNetCore.DDD.Template.Application\DotNetCore.DDD.Template.Application.csproj", "{677F4388-2751-4156-BC97-59523F0C2925}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.DDD.Template.Application", "src\DotNetCore.DDD.Template.Application\DotNetCore.DDD.Template.Application.csproj", "{677F4388-2751-4156-BC97-59523F0C2925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.DDD.Template.Domain", "DotNetCore.DDD.Template.Domain\DotNetCore.DDD.Template.Domain.csproj", "{62A118BA-082C-4B55-B88D-1C20B9911A64}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.DDD.Template.Domain", "src\DotNetCore.DDD.Template.Domain\DotNetCore.DDD.Template.Domain.csproj", "{62A118BA-082C-4B55-B88D-1C20B9911A64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.DDD.Template.Infrastructure", "DotNetCore.DDD.Template.Infrastructure\DotNetCore.DDD.Template.Infrastructure.csproj", "{0ECA28EE-D349-448B-9258-7825200B7BBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.DDD.Template.Infrastructure", "src\DotNetCore.DDD.Template.Infrastructure\DotNetCore.DDD.Template.Infrastructure.csproj", "{0ECA28EE-D349-448B-9258-7825200B7BBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.DDD.Template.Test", "DotNetCore.DDD.Template.Test\DotNetCore.DDD.Template.Test.csproj", "{58535EA3-5078-4B32-8D3B-2C7010579ABC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.DDD.Template.Test", "test\DotNetCore.DDD.Template.Test\DotNetCore.DDD.Template.Test.csproj", "{58535EA3-5078-4B32-8D3B-2C7010579ABC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
