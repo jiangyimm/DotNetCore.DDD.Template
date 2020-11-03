@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace DotNetCore.DDD.Template.Domain.DomainEvents
+namespace DotNetCore.DDD.Template.Domain.Events
 {
     public class TestDomainEvent : INotification
     {

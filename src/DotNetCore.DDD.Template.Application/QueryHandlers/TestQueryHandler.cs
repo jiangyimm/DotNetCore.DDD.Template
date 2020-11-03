@@ -1,4 +1,4 @@
-﻿using DotNetCore.DDD.Template.Domain.DomainEvents;
+﻿using DotNetCore.DDD.Template.Domain.Events;
 using MediatR;
 using System;
 using System.Threading;
