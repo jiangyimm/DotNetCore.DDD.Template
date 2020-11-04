@@ -39,7 +39,7 @@ namespace DotNetCore.DDD.Template.Api
             services.AddScoped<ITestCaseRepository, TestCaseRepository>();
             services.AddDbContext<PgDbContext>(builder =>
             {
-                builder.UseNpgsql(Configuration["ConnectionString"]);
+                builder.UseNpgsql(Configuration["ConnectionString"], builder => builder.MigrationsAssembly("DotNetCore.DDD.Template.Api"));
             });
         }
 
