@@ -26,7 +26,7 @@ namespace DotNetCore.DDD.Template.Application.QueryHandlers
             //TODO business
             Console.WriteLine("this is TestQueryHandler");
 
-            var testCases = await _testCaseRepository.Query(request.SearchKey);
+            var testCases = await _testCaseRepository.QueryAsync(request.SearchKey);
 
             return testCases.Select(p => new TestCaseQueryOutput
             {
@@ -49,7 +49,7 @@ namespace DotNetCore.DDD.Template.Application.QueryHandlers
             //TODO business
             Console.WriteLine("this is TestQueryHandler2");
 
-            var testCases = await _testCaseRepository.Query(request.SearchKey);
+            var testCases = await _testCaseRepository.QueryAsync(request.SearchKey);
 
             return testCases.Select(p => new TestCaseQueryOutput
             {

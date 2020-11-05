@@ -10,7 +10,8 @@ namespace DotNetCore.DDD.Template.Domain.Repositories
 {
     public interface ITestCaseRepository : IRepository<TestCase, long>
     {
-        Task<List<TestCase>> Query(string searchKey);
+        Task<TestCase> GetAggregationAsync(long id);
+        Task<List<TestCase>> QueryAsync(string searchKey);
     }
 
     public class TestCaseRepository : Repository<TestCase, long, PgDbContext>, ITestCaseRepository
@@ -19,7 +20,14 @@ namespace DotNetCore.DDD.Template.Domain.Repositories
         {
         }
 
-        public async Task<List<TestCase>> Query(string searchKey)
+        public async Task<TestCase> GetAggregationAsync(long id)
+        {
+            return await DbContext.TestCases
+                    .Include(p => p.TargetTestCaseGroup)
+                    .Include(p => p.TestCaseDetails)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+        }
+        public async Task<List<TestCase>> QueryAsync(string searchKey)
         {
             return await DbContext.TestCases.ToListAsync();
         }
