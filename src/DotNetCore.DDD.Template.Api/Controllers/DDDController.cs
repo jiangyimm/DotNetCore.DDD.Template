@@ -3,6 +3,7 @@ using DotNetCore.DDD.Template.Application.QueryHandlers;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DotNetCore.DDD.Template.Api.Controllers
@@ -21,7 +22,7 @@ namespace DotNetCore.DDD.Template.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<TestQueryOutput> Get([FromQuery] TestQueryInput input)
+        public async Task<IEnumerable<TestCaseQueryOutput>> Get([FromQuery] TestCaseQueryInput input)
         {
             var result = await _mediator.Send(input);
 
