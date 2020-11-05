@@ -2,9 +2,8 @@
 
 namespace DotNetCore.DDD.Template.Application.CommandHandlers
 {
-    public class TestCommandInput : IRequest<TestCommandOutput>
+    public class TestCaseCreateInput : IRequest<TestCaseCreateOutput>
     {
         public string Name { get; set; }
-        public string Sex { get; set; }
     }
 }

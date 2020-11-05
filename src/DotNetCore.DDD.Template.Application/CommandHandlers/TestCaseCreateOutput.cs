@@ -1,8 +1,8 @@
 ﻿namespace DotNetCore.DDD.Template.Application.CommandHandlers
 {
-    public class TestCommandOutput
+    public class TestCaseCreateOutput
     {
+        public long Id { get; set; }
         public string Name { get; set; }
-        public string Sex { get; set; }
     }
 }

@@ -30,7 +30,7 @@ namespace DotNetCore.DDD.Template.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<TestCommandOutput> Post([FromForm] TestCommandInput input)
+        public async Task<TestCaseCreateOutput> Post([FromForm] TestCaseCreateInput input)
         {
             var result = await _mediator.Send(input);
 
