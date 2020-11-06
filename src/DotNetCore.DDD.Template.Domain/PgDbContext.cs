@@ -25,7 +25,7 @@ namespace DotNetCore.DDD.Template.Domain
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.HasDefaultSchema("test_platform");
-            //modelBuilder.ApplyConfiguration(new TestCaseGroupConfiguration());
+            //modelBuilder.ApplyConfiguration(new TestCaseConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

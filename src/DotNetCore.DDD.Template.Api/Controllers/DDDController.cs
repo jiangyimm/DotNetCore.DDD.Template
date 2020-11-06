@@ -43,6 +43,7 @@ namespace DotNetCore.DDD.Template.Api.Controllers
                 result.Id,
                 result.Name,
                 result.CodeContent,
+                result.TestCaseValueObject,
                 TestCaseGroup = new
                 {
                     result.TargetTestCaseGroup.Id,

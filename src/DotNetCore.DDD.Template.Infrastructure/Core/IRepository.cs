@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using System.Threading;
-using DotNetCore.DDD.Template.Infrastructure.Domain;
+using DotNetCore.DDD.Template.Infrastructure.Abstractions;
 
 namespace DotNetCore.DDD.Template.Infrastructure.Core
 {
@@ -13,7 +13,7 @@ namespace DotNetCore.DDD.Template.Infrastructure.Core
         TEntity Update(TEntity entity);
         Task<TEntity> UpdateAsync(TEntity entity, CancellationToken cancellationToken = default);
         bool Remove(TEntity entity);
-        Task<bool> RemoveAsync(TEntity entity);
+        Task<bool> RemoveAsync(TEntity entity, CancellationToken cancellationToken = default);
     }
 
     public interface IRepository<TEntity, TKey> : IRepository<TEntity>

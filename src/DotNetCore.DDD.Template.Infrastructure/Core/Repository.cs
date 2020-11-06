@@ -1,6 +1,6 @@
 using System.Threading;
 using System.Threading.Tasks;
-using DotNetCore.DDD.Template.Infrastructure.Domain;
+using DotNetCore.DDD.Template.Infrastructure.Abstractions;
 
 namespace DotNetCore.DDD.Template.Infrastructure.Core
 {
@@ -34,7 +34,7 @@ namespace DotNetCore.DDD.Template.Infrastructure.Core
             return true;
         }
 
-        public Task<bool> RemoveAsync(TEntity entity)
+        public Task<bool> RemoveAsync(TEntity entity, CancellationToken cancellationToken = default)
         {
             return Task.FromResult(Remove(entity));
         }

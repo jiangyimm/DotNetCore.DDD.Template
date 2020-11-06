@@ -1,4 +1,4 @@
-namespace DotNetCore.DDD.Template.Infrastructure.Domain
+namespace DotNetCore.DDD.Template.Infrastructure.Abstractions
 {
     /// <summary>
     /// 聚合根

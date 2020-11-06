@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using DotNetCore.DDD.Template.Infrastructure.Domain;
+using DotNetCore.DDD.Template.Infrastructure.Abstractions;
 
 namespace DotNetCore.DDD.Template.Domain.TestCaseAggregate
 {

@@ -40,7 +40,9 @@ namespace DotNetCore.DDD.Template.Api.Migrations
                     Sort = table.Column<short>(nullable: false),
                     CodeContent = table.Column<string>(nullable: true),
                     OperCode = table.Column<string>(maxLength: 16, nullable: true),
-                    OperTime = table.Column<DateTimeOffset>(nullable: false)
+                    OperTime = table.Column<DateTimeOffset>(nullable: false),
+                    TestCaseValueObject_Feild1 = table.Column<string>(nullable: true),
+                    TestCaseValueObject_Feild2 = table.Column<bool>(nullable: true)
                 },
                 constraints: table =>
                 {

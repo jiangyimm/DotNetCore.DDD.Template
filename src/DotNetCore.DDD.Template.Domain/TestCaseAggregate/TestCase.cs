@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using DotNetCore.DDD.Template.Infrastructure.Domain;
+using DotNetCore.DDD.Template.Infrastructure.Abstractions;
 
 namespace DotNetCore.DDD.Template.Domain.TestCaseAggregate
 {
@@ -22,21 +22,30 @@ namespace DotNetCore.DDD.Template.Domain.TestCaseAggregate
         public TestCaseGroup TargetTestCaseGroup { get; private set; }
         public List<TestCaseDetail> TestCaseDetails { get; private set; }
 
-        public TestCase(string name, short sort, string codeContent, string operCode, DateTimeOffset operTime
-        //TestCaseGroup targetTestCaseGroup,
-        //List<TestCaseDetail> testCaseDetails = null
-        )
+        /// <summary>
+        /// Value Object
+        /// </summary>
+        /// <value></value>
+        public TestCaseValueObject TestCaseValueObject { get; private set; }
+
+        protected TestCase() { }
+        public TestCase(string name, short sort, string codeContent, string operCode, DateTimeOffset operTime,
+        TestCaseValueObject testCaseValueObject)
         {
             this.Name = name;
             this.Sort = sort;
             this.CodeContent = codeContent;
             this.OperCode = operCode;
             this.OperTime = operTime;
-            //this.TargetTestCaseGroup = targetTestCaseGroup;
-            //this.TestCaseDetails = testCaseDetails;
+            this.TestCaseValueObject = testCaseValueObject;
         }
 
-        public void AddTargetTestCaseGroup(TestCaseGroup testCaseGroup)
+        public void ChangeTestCaseValueObject(TestCaseValueObject testCaseValueObject)
+        {
+            this.TestCaseValueObject = testCaseValueObject;
+        }
+
+        public void SetTargetTestCaseGroup(TestCaseGroup testCaseGroup)
         {
             this.TargetTestCaseGroup = testCaseGroup;
         }

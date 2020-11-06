@@ -136,6 +136,27 @@ namespace DotNetCore.DDD.Template.Api.Migrations
                         .HasForeignKey("TestCaseGroupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.OwnsOne("DotNetCore.DDD.Template.Domain.TestCaseAggregate.TestCaseValueObject", "TestCaseValueObject", b1 =>
+                        {
+                            b1.Property<long>("TestCaseId")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("bigint")
+                                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                            b1.Property<string>("Feild1")
+                                .HasColumnType("text");
+
+                            b1.Property<bool>("Feild2")
+                                .HasColumnType("boolean");
+
+                            b1.HasKey("TestCaseId");
+
+                            b1.ToTable("test_case");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TestCaseId");
+                        });
                 });
 
             modelBuilder.Entity("DotNetCore.DDD.Template.Domain.TestCaseAggregate.TestCaseDetail", b =>
