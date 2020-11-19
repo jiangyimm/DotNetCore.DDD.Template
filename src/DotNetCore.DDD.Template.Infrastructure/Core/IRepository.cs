@@ -5,7 +5,7 @@ using DotNetCore.DDD.Template.Infrastructure.Abstractions;
 namespace DotNetCore.DDD.Template.Infrastructure.Core
 {
     public interface IRepository<TEntity>
-    where TEntity : Entity, IAggregationRoot
+    where TEntity : Entity, IAggregateRoot
     {
         IUnitOfWork UnitOfWork { get; }
         TEntity Add(TEntity entity);
@@ -17,7 +17,7 @@ namespace DotNetCore.DDD.Template.Infrastructure.Core
     }
 
     public interface IRepository<TEntity, TKey> : IRepository<TEntity>
-    where TEntity : Entity<TKey>, IAggregationRoot
+    where TEntity : Entity<TKey>, IAggregateRoot
     {
         bool Remove(TKey id);
         Task<bool> RemoveAsync(TKey id, CancellationToken cancellationToken = default);

@@ -7,7 +7,7 @@ using DotNetCore.DDD.Template.Infrastructure.Abstractions;
 namespace DotNetCore.DDD.Template.Domain.TestCaseAggregate
 {
     [Table("test_case", Schema = "test_platform")]
-    public class TestCase : Entity<long>, IAggregationRoot
+    public class TestCase : Entity<long>, IAggregateRoot
     {
         [ForeignKey(nameof(TargetTestCaseGroup))]
         public long TestCaseGroupId { get; private set; }

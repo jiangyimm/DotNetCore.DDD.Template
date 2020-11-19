@@ -6,7 +6,7 @@ namespace DotNetCore.DDD.Template.Infrastructure.Core
 {
     public abstract class Repository<TEntity, TDbContext>
     : IRepository<TEntity>
-    where TEntity : Entity, IAggregationRoot
+    where TEntity : Entity, IAggregateRoot
     where TDbContext : EFContext
     {
         protected virtual TDbContext DbContext { get; set; }
@@ -52,7 +52,7 @@ namespace DotNetCore.DDD.Template.Infrastructure.Core
 
     public abstract class Repository<TEntity, TKey, TDbContext>
     : Repository<TEntity, TDbContext>, IRepository<TEntity, TKey>
-    where TEntity : Entity<TKey>, IAggregationRoot
+    where TEntity : Entity<TKey>, IAggregateRoot
     where TDbContext : EFContext
     {
         protected Repository(TDbContext dbContext) : base(dbContext)
